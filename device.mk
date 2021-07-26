@@ -52,6 +52,10 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/display/qdcm_calib_data_csot_fhd_video_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_csot_fhd_video_dsi_panel.xml \
     $(DEVICE_PATH)/configs/display/qdcm_calib_data_tianma_fhd_video_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_tianma_fhd_video_dsi_panel.xml
 
+# Dynamic partitions
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/partitions/flash_super_dummy.sh:install/bin/flash_super_dummy.sh
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     com.fingerprints.extension@1.0.vendor \
