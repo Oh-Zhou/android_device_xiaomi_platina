@@ -29,9 +29,6 @@ DEVICE_PATH := device/xiaomi/platina
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
-# Inherit properties.mk
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
