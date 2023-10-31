@@ -71,7 +71,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
-    AvoidAppsInCutoutOverlay
+    AvoidAppsInCutoutOverlay \
+    PlatinaFrameworksBaseOverlay \
+    PlatinaSystemUIOverlay
 
 # Partitions
 PRODUCT_PACKAGES += \
