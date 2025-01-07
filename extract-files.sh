@@ -12,6 +12,12 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q libpiex_shim.so "${2}" || "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
             ;;
+        vendor/lib/libmmcamera_faceproc.so)
+            ${PATCHELF_0_18} --clear-symbol-version "__aeabi_memcpy" "${2}"
+            ${PATCHELF_0_18} --clear-symbol-version "__aeabi_memset" "${2}"
+            ${PATCHELF_0_18} --clear-symbol-version "__gnu_Unwind_Find_exidx" "${2}"
+            [ "$2" = "" ] && return 0
+            ;;
         vendor/lib/libVDSuperPhotoAPI.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF_0_18}" --clear-symbol-version "remote_handle_close" "${2}"
