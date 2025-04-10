@@ -9,9 +9,18 @@
 function blob_fixup() {
     case "${1}" in
         vendor/lib/libMiCameraHal.so)
+            [ "$2" = "" ] && return 0
             grep -q libpiex_shim.so "${2}" || "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
             ;;
+        *)
+            return 1
+            ;;
     esac
+    return 0
+}
+
+function blob_fixup_dry() {
+    blob_fixup "$1" ""
 }
 
 # If we're being sourced by the common script that we called,
