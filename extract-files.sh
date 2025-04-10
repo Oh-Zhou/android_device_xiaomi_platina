@@ -18,6 +18,14 @@ function blob_fixup() {
             "${PATCHELF_0_18}" --clear-symbol-version "remote_handle_invoke" "${2}"
             "${PATCHELF_0_18}" --clear-symbol-version "remote_handle_open" "${2}"
             ;;
+        vendor/lib64/hw/fingerprint.fpc.default.so)
+            [ "$2" = "" ] && return 0
+            patchelf --set-soname "fingerprint.fpc.default.so" "${2}"
+            ;;
+        vendor/lib64/hw/fingerprint.goodix.default.so)
+            [ "$2" = "" ] && return 0
+            patchelf --set-soname "fingerprint.goodix.default.so" "${2}"
+            ;;
         *)
             return 1
             ;;
