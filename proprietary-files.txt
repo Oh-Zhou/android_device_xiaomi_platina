@@ -1,5 +1,7 @@
 # Not appended blobs from platina-user 10 QKQ1.190910.002 V12.0.3.0.QDTMIXM release-keys
 
+# libmm-qcamera depend on libmmcamera_interface, which is a gnu makefile target
+
 # Audio Power Amplifier
 vendor/firmware/dbmd4_va_fw.bin
 vendor/firmware/tfa98xx_aac.cnt
@@ -54,7 +56,7 @@ vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
 vendor/lib/libmorphohht4.0.so
 vendor/lib/libmibokeh_660.so
-vendor/lib/libmm-qcamera.so
+vendor/lib/libmm-qcamera.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera_arcsoftbokeh_lib.so
 vendor/lib/libmmcamera_atmel_at24c32e_eeprom.so
 vendor/lib/libmmcamera_bokeh.so
