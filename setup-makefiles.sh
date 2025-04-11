@@ -25,6 +25,15 @@ function lib_to_package_fixup() {
         lib_to_package_fixup_vendor_variants "$@"
 }
 
+function vendor_imports() {
+    cat <<EOF >>"$1"
+		"hardware/qcom-caf/common/libqti-perfd-client",
+		"hardware/qcom/wlan/legacy",
+		"hardware/qcom-caf/msm8996",
+    		"hardware/xiaomi",
+EOF
+}
+
 # If we're being sourced by the common script that we called,
 # stop right here. No need to go down the rabbit hole.
 if [ "${BASH_SOURCE[0]}" != "${0}" ]; then
