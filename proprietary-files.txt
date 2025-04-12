@@ -624,6 +624,13 @@ vendor/lib64/sensors.ssc.so
 
 # Thermal
 vendor/etc/thermal-engine.conf
+vendor/etc/thermal-engine-sdm660.conf
+vendor/etc/thermal-engine-sdm660-camera.conf
+vendor/etc/thermal-engine-sdm660-high.conf
+vendor/etc/thermal-engine-sdm660-map.conf
+vendor/etc/thermal-engine-sdm660-nolimits.conf
+vendor/etc/thermal-engine-sdm660-pubgmhd.conf
+vendor/etc/thermal-engine-sdm660-sgame.conf
 vendor/bin/thermal-engine
 vendor/lib64/libthermalioctl.so
 
