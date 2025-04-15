@@ -41,6 +41,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libMegviiFacepp-0.5.2 \
     libmegface \
+    libpiex_shim \
     libstdc++_vendor
 
 # Consumerir

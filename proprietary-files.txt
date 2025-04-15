@@ -35,7 +35,7 @@ vendor/lib64/libsndmonitor.so
 
 # Camera
 vendor/lib/hw/camera.sdm660.so
-vendor/lib/libMiCameraHal.so;DISABLE_DEPS
+vendor/lib/libMiCameraHal.so
 vendor/lib/libSNPE.so
 vendor/lib/libVDClearShot.so
 vendor/lib/libVDSuperPhotoAPI.so
