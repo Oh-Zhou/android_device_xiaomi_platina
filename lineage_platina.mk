@@ -7,6 +7,7 @@
 # Inherit some common Evolution-X stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_ACCORD = false
 TARGET_SCREEN_WIDTH := 1080
 TARGET_BUILD_DEVICE_AS_WEBCAM := true
 TARGET_ENABLE_BLUR := false
