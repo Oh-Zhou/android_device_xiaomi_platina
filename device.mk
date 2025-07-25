@@ -44,9 +44,11 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     PlatinaApertureOverlay \
     PlatinaFrameworksOverlay \
-    PlatinaNoCutoutOverlay \
     PlatinaSettingsOverlay \
     PlatinaSystemUIOverlay
+
+PRODUCT_PACKAGES += \
+    NoCutoutOverlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
