@@ -69,6 +69,7 @@ BOARD_HAVE_QCOM_FM := false
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
+    $(DEVICE_PATH)/overlay-evolution \
     $(DEVICE_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
