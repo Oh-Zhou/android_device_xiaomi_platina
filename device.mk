@@ -80,6 +80,10 @@ PRODUCT_PACKAGES += \
     fstab.qcom.ramdisk \
     init.device.rc
 
+# Screen density
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
