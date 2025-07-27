@@ -15,5 +15,8 @@ persist.vendor.imx376_ofilm.low.lux=290
 persist.vendor.imx376_sunny.light.lux=275
 persist.vendor.imx376_sunny.low.lux=290
 
+# Display
+debug.vds.allow_hwc=0
+
 # Fingerprint
 persist.vendor.fingerprint.type=rear
