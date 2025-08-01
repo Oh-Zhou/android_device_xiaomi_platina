@@ -41,6 +41,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    camera.sdm660 \
     libMegviiFacepp-0.5.2 \
     libmegface \
     libpiex_shim \
