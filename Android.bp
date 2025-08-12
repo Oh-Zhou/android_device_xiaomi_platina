@@ -1,4 +1,8 @@
 soong_namespace {
+    imports: [
+        "hardware/qcom-caf/sdm660",
+        "vendor/qcom/opensource/display",
+    ],
 }
 
 install_symlink {
