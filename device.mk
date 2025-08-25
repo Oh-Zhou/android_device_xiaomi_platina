@@ -86,7 +86,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.3-service-qti
+    android.hardware.usb@1.3-service.basic
 
 # Wifi
 PRODUCT_PACKAGES += \
