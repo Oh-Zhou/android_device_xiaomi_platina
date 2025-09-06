@@ -4,15 +4,15 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common Evolution-X stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Infinity-X stuff
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+INFINITY_BUILD_TYPE := UNOFFICIAL
+WITH_GAPPS := true
+INFINITY_MAINTAINER := SABAR
+
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_HAS_UDFPS := false
-TARGET_INCLUDE_ACCORD = false
 TARGET_SCREEN_WIDTH := 1080
-TARGET_BUILD_DEVICE_AS_WEBCAM := true
-TARGET_ENABLE_BLUR := false
-TARGET_USES_PICO_GAPPS := true
 
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -20,7 +20,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := platina
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := lineage_platina
+PRODUCT_NAME := infinity_platina
 PRODUCT_MODEL := MI 8 Lite
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
