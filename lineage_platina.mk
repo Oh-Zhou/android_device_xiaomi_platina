@@ -21,6 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 
 # Inherit some common Evolution-X stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+BUILD_BCR = false
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_HAS_UDFPS := false
 TARGET_INCLUDE_ACCORD = false
