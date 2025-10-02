@@ -7,6 +7,5 @@
 runtime_resource_overlay {
     name: "PlatinaFrameworksBaseOverlay",
     theme: "PlatinaFrameworksBaseOverlay",
-    sdk_version: "current",
     product_specific: true,
 }
