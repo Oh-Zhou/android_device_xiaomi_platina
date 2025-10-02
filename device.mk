@@ -58,6 +58,7 @@ PRODUCT_COPY_FILES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint-service.xiaomi_sdm660 \
     com.fingerprints.extension@1.0.vendor \
     vendor.goodix.hardware.fingerprintextension@1.0.vendor
 
