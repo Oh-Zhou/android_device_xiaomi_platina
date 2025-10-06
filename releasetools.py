@@ -19,10 +19,9 @@ import re
 
 def FullOTA_InstallBegin(info):
   AddImage(info, "RADIO", "super_dummy.img", "/tmp/super_dummy.img");
-  flash_script = open("device/xiaomi/platina/partitions/flash_super_dummy.sh", 'r').read()
-  common.ZipWriteStr(info.output_zip, "install/bin/flash_super_dummy.sh", flash_script);
   info.script.AppendExtra('package_extract_file("install/bin/flash_super_dummy.sh", "/tmp/flash_super_dummy.sh");')
-  info.script.AppendExtra('run_program("/sbin/sh", "/tmp/flash_super_dummy.sh");')
+  info.script.AppendExtra('set_metadata("/tmp/flash_super_dummy.sh", "uid", 0, "gid", 0, "mode", 0755);')
+  info.script.AppendExtra('run_program("/tmp/flash_super_dummy.sh");')
   return
 
 def AddImage(info, dir, basename, dest):
