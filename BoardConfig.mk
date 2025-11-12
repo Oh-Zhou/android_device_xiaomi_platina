@@ -41,6 +41,7 @@ BOARD_QTI_CAMERA_32BIT_ONLY := true
 TARGET_SCREEN_DENSITY := 440
 
 # Kernel
+BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/c0c4000.sdhci
 TARGET_KERNEL_CONFIG := platina_defconfig
 
 # Manifest
