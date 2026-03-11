@@ -41,6 +41,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/etc/permissions/com.fingerprints.extension.xml': blob_fixup()
+        .regex_replace('/system/framework/', '/system_ext/framework/'),
     'vendor/lib64/hw/fingerprint.fpc.so': blob_fixup()
         .fix_soname(),
     'vendor/lib64/hw/fingerprint.goodix.so': blob_fixup()
