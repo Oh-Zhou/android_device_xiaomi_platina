@@ -20,7 +20,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.xiaomi_sdm660 \
+    android.hardware.biometrics.fingerprint-service.xiaomi \
     com.fingerprints.extension@1.0.vendor \
     vendor.goodix.hardware.fingerprintextension@1.0.vendor
 
@@ -50,7 +50,8 @@ PRODUCT_COPY_FILES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    init.device.rc
+    init.device.rc \
+    init.fingerprint.rc
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
