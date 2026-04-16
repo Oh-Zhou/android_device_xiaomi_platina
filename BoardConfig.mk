@@ -28,7 +28,7 @@ TARGET_SCREEN_DENSITY := 440
 TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 
 # Kernel
-TARGET_KERNEL_CONFIG += vendor/xiaomi/platina.config
+TARGET_KERNEL_CONFIG := platina_defconfig
 
 # Partitions
 BOARD_SUPER_PARTITION_SYSTEM_DEVICE_SIZE := 3221225472
