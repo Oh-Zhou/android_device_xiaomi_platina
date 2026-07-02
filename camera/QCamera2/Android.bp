@@ -33,6 +33,7 @@ cc_library_shared {
     include_dirs: [
         "device/xiaomi/platina/camera/mm-image-codec/qexif",
         "device/xiaomi/platina/camera/mm-image-codec/qomx_core",
+        "frameworks/native/include",
         "hardware/qcom-caf/sdm660/media/libstagefrighthw",
         "hardware/qcom-caf/sdm660/media/mm-core/inc",
         "system/memory/libion/kernel-headers",
@@ -54,6 +55,7 @@ cc_library_shared {
         "libandroid_sensor_headers",
         "libcutils_headers",
         "libsystem_headers",
+        "libgui_headers",
         "libhardware_headers",
         "generated_kernel_headers",
     ],
@@ -92,6 +94,7 @@ cc_library_shared {
         "libion",
         "android.hidl.base@1.0",
         "libhidlbase",
+        "libgui",
     ],
     srcs: [
         "util/QCameraBufferMaps.cpp",
