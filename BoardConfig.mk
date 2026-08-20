@@ -42,7 +42,7 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/c0c4000.sdhci
-TARGET_KERNEL_CONFIG := platina_defconfig kernelsu-next.config
+TARGET_KERNEL_CONFIG := platina_defconfig
 
 # Manifest
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
