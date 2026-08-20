@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/infinity_platina.mk
+    $(LOCAL_DIR)/lineage_platina.mk
