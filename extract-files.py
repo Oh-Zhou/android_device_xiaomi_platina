@@ -39,6 +39,8 @@ blob_fixups: blob_fixups_user_type = {
         .fix_soname(),
     'vendor/lib64/hw/fingerprint.goodix.so': blob_fixup()
         .fix_soname(),
+    'vendor/etc/permissions/com.fingerprints.extension.xml': blob_fixup()
+        .regex_replace('/system/framework/', '/system_ext/framework/'),
     'vendor/lib/libmmcamera_faceproc.so': blob_fixup()
         .clear_symbol_version('__aeabi_memcpy')
         .clear_symbol_version('__aeabi_memset')
