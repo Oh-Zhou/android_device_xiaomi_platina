@@ -83,6 +83,9 @@ PRODUCT_PACKAGES += \
     tune2fs_ramdisk \
     resize2fs_ramdisk
 
+# Power
+$(call soong_config_set,qtipower,tap_to_wake_node,/sys/touchpanel/double_tap)
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
