@@ -21,14 +21,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 
 # Inherit some common Evolution-X stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-BUILD_BCR = false
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_HAS_UDFPS := false
-TARGET_INCLUDE_ACCORD = false
 TARGET_SCREEN_WIDTH := 1080
-TARGET_BUILD_DEVICE_AS_WEBCAM := false
-TARGET_ENABLE_BLUR := true
-TARGET_USES_PICO_GAPPS := true
 
 # Inherit from platina device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
