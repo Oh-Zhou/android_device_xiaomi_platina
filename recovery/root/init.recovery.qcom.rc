@@ -25,28 +25,33 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+# Qcom common decryption
 import /init.recovery.qcom_decrypt.rc
 
-on init
-    mkdir /dev/binderfs
-    mount binder binder /dev/binderfs stats=global
-    chmod 0755 /dev/binderfs
-    chmod 0666 /dev/binderfs/hwbinder
-    chmod 0666 /dev/binderfs/binder
-    chmod 0666 /dev/binderfs/vndbinder
-    symlink /dev/binderfs/binder /dev/binder
-    symlink /dev/binderfs/hwbinder /dev/hwbinder
-    symlink /dev/binderfs/vndbinder /dev/vndbinder
-
-    setprop prepdecrypt.setpatch true
-    setprop prepdecrypt.loglevel 2
+on early-init
+    start set_permissive
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     # DT2W
-    write /sys/touchpanel/double_tap 1
+    write /proc/touchpanel/wake_gesture 1
 
 on boot
+    start qseecomd
+    exec u:r:recovery:s0 -- /system/bin/sleep 1s
+    start keymaster-3-0
+    start keymaster-3-0-qti
     start health-hal-2-1
-    setprop sys.usb.config adb
+
+on boot
+
+
+
+
+service set_permissive /system/bin/set_permissive.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
